@@ -1,0 +1,783 @@
+@font-face {
+    font-family: robotoRegular;
+    src: url(fonts/Roboto/Roboto-Regular.woff);
+    src: url(fonts/Roboto/Roboto-Regular.woff2);
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url(fonts/Roboto/Roboto-Bold.woff);
+    src: url(fonts/Roboto/Roboto-Bold.woff2);
+}
+
+@font-face {
+    font-family: latoRegular;
+    src: url(fonts/Lato/Lato-Regular.woff);
+    src: url(fonts/Lato/Lato-Regular.woff2);
+}
+
+@font-face {
+    font-family: latoBold;
+    src: url(fonts/Lato/Lato-Bold.woff);
+    src: url(fonts/Lato/Lato-Bold.woff2);
+}
+
+
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+video {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* PERSONLIGA STILREGLER */
+
+* {
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* flex layout for header */
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* NAVBAR 1 */
+.top-navbar{
+    background-color:#17243a;
+    color: white;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding:0 3.125em;
+    width: 100%;
+}
+.center{
+    margin: 0 auto;
+    font-size: small;
+    font-family: robotoRegular;
+}
+
+/* NAVBAR 2 */
+.second-navbar{
+    display:flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    background-color: white;
+}
+/* Logo */
+.logo{
+    display: inline-block;
+    margin-top: 0.5em;
+}
+/* 2 navbar menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu > a{
+    font-family: robotoRegular;
+    text-decoration:none;
+    text-transform: capitalize;
+    font-size: 0.875rem;
+    color: black;
+    padding: 0.3125em 0.625em;
+}
+.menu > a:hover {
+    border-bottom: 2px solid black;
+}
+/* navbar icons*/
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-icons {
+    margin: 0em 1em;
+}
+.menu-icons:hover {
+    color: #21618C;
+}
+
+/* VIDEO BACKGROUND*/
+
+.primaryVideo-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*SCROLL SPORTS CATEGORIES*/
+
+div.scroll-container {
+    display: flex;
+    flex-direction: row;
+    background-color:white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0.625em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+  
+.sports-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sportsImg {
+    padding: 0.625em;
+    width: 21.875em;
+    height: 31.25em;
+}
+
+.sportsImg-text {
+ margin-left: 0.5em;
+ font-size: larger;
+ text-transform: uppercase;
+ font-family:robotoRegular;
+}
+
+.sportsImg-text:hover {
+    color: #21618C;
+}
+
+
+/* LINK WITH PICTURE BACKGROUND */
+
+.img-frame {
+    display: flex; 
+    justify-content: left;
+    align-items: center;
+    background-image: url(images/Pic12.jpg);
+    background-size: cover;
+    background-position: 100% 25%;
+    height: 40em;
+    margin: 5em 0em;
+}
+
+.wetsuitInput {
+    display: flex; /* Layout FLEX */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3em;
+    padding: 1em 1em;
+}
+
+.bg-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttonLinks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.links {
+    width: 100%;
+    padding: 1em 4em;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: larger;
+    text-decoration: none;
+    font-family: latoRegular;
+}
+
+.links:hover {
+    background-color: transparent;
+    color: white;
+}
+
+
+/* Fall and Summer Collection */
+
+.season-collection {
+    padding-top: 7em;
+}
+
+.season-container {
+    height: auto;
+    width: 100%;
+}
+
+.season-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.5em;
+    grid-template-areas: 
+    'Picture1 .'
+    'Picture1 Heading'
+    'Picture1 Picture2'
+    'P .';
+    width: 100%;
+}
+
+.season-img1a {
+    grid-area: Picture1;
+}
+
+.season-img1a > img {
+    height: auto;
+    width: 100%;
+}
+
+.season-heading {
+    grid-area: Heading;
+    line-height: 4em;
+}
+
+.season-heading > h2 {
+    font-size: 3rem;
+    font-family: robotoRegular;
+}
+
+.season-heading > p {
+    font-size: 2rem;
+    font-family: robotoRegular;
+}
+
+.season-heading > a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    font-family: robotoRegular;
+}
+
+.season-heading > a:hover {
+    text-decoration: underline;
+}
+
+.season-img1b {
+    grid-area: Picture2;
+}
+
+.season-img1b > img {
+    height: auto;
+    width: 100%;
+}
+
+/* MIDDLE TEXT */
+.middle-text > h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: latoBold;
+}
+
+/*Video background frame*/
+
+/* Kids COLLECTION */
+
+.video-background {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 7em;
+}
+
+.video-background > video {
+    height: 50em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-content {
+    position: absolute;
+    text-align: center;
+}
+
+.video-content > h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1em;
+    font-family: robotoBold;
+}
+
+.video-link {
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    font-size: 1.3rem;
+    font-family: robotoRegular;
+}
+
+.video-link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* PRODUCTS */
+
+.products {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.products > h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2em;
+    font-family: RobotoBold;
+}
+
+.productsGridArea1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    margin: 0 3em;
+    grid-template-areas: 
+    'JumperSet LinenShorts CottonDress Espadrilles';
+}
+
+.product1 { grid-area: JumperSet; }
+
+.product2 { grid-area: LinenShorts; }
+
+.product3 { grid-area: CottonDress; }
+
+.product4 { grid-area: Espadrilles; }
+
+.productsGridArea2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    margin: 0 3em;
+    margin-top: 6em;
+    grid-template-areas: 
+    'TShirt BabyJacket SkaterShoes Scarf';
+}
+
+.product5 { grid-area: TShirt; }
+
+.product6 { grid-area: BabyJacket; }
+
+.product7 { grid-area: SkaterShoes; }
+
+.product8 { grid-area: Scarf; }
+    
+.productImg {
+    width: 100%;
+    height: auto;
+}
+
+.productText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productText > p {
+    font-size: larger;
+    font-family: latoRegular;
+}
+
+.shopbutton {
+    margin-top: 7em;
+}
+
+.shopProducts {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 1em 2em;
+    font-family: robotoRegular;
+}
+
+.shopProducts:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* ASIDE */
+
+aside > img {
+    width: 100%;
+    height: auto;
+}
+
+/* FOOTER */
+
+.footer-container {
+    background-color: #17243a;
+    padding: 7em 0em;
+}
+
+.socialMedia {
+    text-align: center;
+}
+
+.socialMedia > a {
+    text-decoration: none;
+    color: white;
+    padding-right: 3em;
+}
+
+.registration-details {
+    text-align: center;
+}
+
+.registration-details > p {
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    cursor: text;
+    font-family: latoRegular;
+}
+
+.registration-details > a {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: latoRegular;
+}
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-template-areas: 
+    'Shop About Support';
+    text-align: center;
+    margin-top: 5em;
+
+}
+
+.menu1 { grid-area: Shop; }
+
+.menu2 { grid-area: About; }
+
+.menu3 { grid-area: Support; }
+
+.menu1, .menu2, .menu3 {
+    color: white;
+    text-align: center;
+}
+
+.menuFooter-heading {
+    font-size: 2rem;
+    font-family: latoRegular;
+}
+
+.footer-menuLinks {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+    margin-top: 1em;
+}
+
+.footer-menuLinks > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: latoRegular;
+}
+
+.footer-menuLinks > a:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+
+/* MEDIA QURIES */
+
+@media only screen and (max-width: 930px) {
+
+    /* NAVBAR 2 (Change of layout with Grid)*/
+    .second-navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2em;
+    }
+
+    .logo {
+        margin-bottom: 1em;
+    }
+
+    .menu {
+        margin-bottom: 1em;
+    }
+
+    /* LINK WITH PICTURE BACKGROUND (Change of background position) */
+    .img-frame {
+        background-position: 10% 100%;
+    }
+    
+}
+
+/* FOR TABLET and down */
+
+@media only screen and (max-width: 733px) {
+
+    /* Fall and Summer Collection (Change of layout and shrinking of text) */
+
+    .season-items {
+        grid-template-areas: 
+        'Picture1 Heading'
+        'Picture1 Picture2';
+    }
+
+    .season-heading {
+        line-height: 3em;
+    }
+
+    .season-heading > h2 {
+        font-size: 2rem;
+    }
+
+    .season-heading > p {
+        font-size: 1.5rem;
+    }
+
+    .season-heading > a {
+        font-size: 1.5rem;
+    }
+    
+    /* MIDDLE TEXT (Shrinking of text)*/
+    .middle-text > h2 {
+        font-size: 3rem;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen  and (max-width: 680px){
+    
+    /* PRODUCTS */
+
+    .productsGridArea1 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'JumperSet LinenShorts'
+        'CottonDress Espadrilles';
+    }
+
+    .productsGridArea2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'TShirt BabyJacket'
+        'SkaterShoes Scarf';
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+    
+    /* 2 navbar menu (added flex-wrap:wrap;) */
+    .menu {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 515px) {
+
+    /* Fall and Summer Collection (Layout change) */
+
+    .season-collection {
+        padding-top: 1em;
+    }
+
+    .season-items {
+        grid-template-areas: 
+        'Heading Heading'
+        'Picture1 Picture2'
+        'Picture1 .';
+    }
+
+    .season-heading {
+        margin-left: 2em;
+        margin-bottom: -2em;
+    }
+
+    .season-heading > h2 {
+        font-size: 1.5rem;
+    }
+
+    
+
+}
+
+/* FOR MOBILE BIG and down */
+
+@media only screen and (max-width: 425px){
+
+    /* LINK WITH PICTURE BACKGROUND (Change of background position) */
+    .img-frame {
+        background-position: 50% 100%;
+    }
+
+    /* Fall and Summer Collection (Change of layout and shrinking of text) */
+
+    .season-heading {
+        line-height: 2.3em;
+    }
+
+    .season-heading > a {
+        font-size: 1.5rem;
+    }
+
+    /* MIDDLE TEXT (Change font-size) */
+    .middle-text > h2 {
+        font-size: 2.5rem;
+    }
+
+    /*Video background frame Kids COLLECTION ( Top space added with margin)*/
+
+    .video-background {
+        margin-top: 5em;
+    }
+
+}
+
+/* FOR MOBILE SMALL and down */
+
+@media only screen and (max-width: 375px) {
+
+    /* PRODUCTS */
+
+    .productsGridArea1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        'JumperSet'
+        'LinenShorts'
+        'CottonDress' 
+        'Espadrilles';
+    }
+
+    .productsGridArea2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'TShirt BabyJacket'
+        'SkaterShoes Scarf';
+    }
+
+    /* FOOTER  (Changed layout) */
+    .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'About About'
+        'Shop Support';
+    }
+
+    .socialMedia > a {
+        padding-right: 1em;
+    }
+
+    .registration-details > p {
+        font-size: 1.7rem;
+    }
+
+    .menu2 {
+        margin-bottom: 2.5em;
+    }
+
+    .menuFooter-heading {
+        font-size: 2rem;
+    }
+
+    /* LINK WITH PICTURE BACKGROUND ( Centered ) */
+
+    .wetsuitInput {
+        margin-left: 0.4em;
+    }
+
+    /* Fall and Summer Collection (centering) */
+
+    .season-heading {
+        margin-left: 1em;
+    }
+
+}
+
+
+
+/* ANALYSTEXT */
+
+article {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5em 5em;
+    line-height: 1.5em;
+}
+
+article > h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.text-info {
+    font-style: italic;
+}
+
+.border {
+    margin: 1em;
+    width: 100%;
+    border-bottom: 2px solid black;
+
+}
+
+.analystext-section {
+    margin: 1em 0em;
+}
+
+.analystext-section > h2 {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.analystext-section > h3 {
+    font-weight: bold;
+    font-size: large;
+}
+
+
